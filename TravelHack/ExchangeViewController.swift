@@ -22,6 +22,8 @@ class ExchangeViewController: UIViewController {
   @IBOutlet var convertTextField: UITextField!
   @IBOutlet var convertResult: UILabel!
   
+  //Hello
+  
   @IBAction func convertingCurrency() {
     let baseCountry = self.baseTextField.text!.uppercased()
     let exchangeRequest = CurrencyRequest(countryCode: baseCountry)
