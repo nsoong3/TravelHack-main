@@ -86,5 +86,11 @@ class ExchangeViewController: UIViewController {
     alert.addAction(action)
     self.present(alert, animated: true, completion: nil)
   }
+  
+  @IBAction func dismissKeyboard(sender: AnyObject) {
+    amountTextField.resignFirstResponder()
+    baseTextField.resignFirstResponder()
+    convertTextField.resignFirstResponder()
+  }
 }
 

@@ -52,5 +52,10 @@ class WeatherViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+  
+  @IBAction func dismissKeyboard() {
+    latitudeTextField.resignFirstResponder()
+    longitudeTextField.resignFirstResponder()
+  }
 
 }
