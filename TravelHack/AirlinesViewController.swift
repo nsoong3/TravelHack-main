@@ -30,7 +30,13 @@ class AirlinesViewController: UIViewController {
     @IBOutlet weak var currencyTextField: UITextField!
     @IBOutlet weak var cabinTextField: UITextField!
     
-    var setOfTrips = [TripDetail]()
+    var setOfTrips = [TripDetail]() {
+        didSet {
+            DispatchQueue.main.async {
+              self.tableView.reloadData()
+            }
+        }
+    }
     
 
       override func viewDidLoad() {
@@ -85,6 +91,7 @@ class AirlinesViewController: UIViewController {
                         self.setOfTrips = airlineDetails
                         print(self.setOfTrips[0].cheapestProviderName)
                         print(self.setOfTrips[0].displayLowTotal)
+        
                     } catch {
                         print(error)
                     }
