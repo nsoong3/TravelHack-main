@@ -18,6 +18,7 @@
 		37969EB122F3900D0033C90F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37969EAF22F3900D0033C90F /* LaunchScreen.storyboard */; };
 		37969EB922F396F20033C90F /* CurrencyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37969EB822F396F20033C90F /* CurrencyRequest.swift */; };
 		37969EBB22F397FF0033C90F /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37969EBA22F397FF0033C90F /* Currency.swift */; };
+		37E9C9042354021C005E6572 /* AirlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E9C9032354021B005E6572 /* AirlinesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		37969EB222F3900D0033C90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37969EB822F396F20033C90F /* CurrencyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRequest.swift; sourceTree = "<group>"; };
 		37969EBA22F397FF0033C90F /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		37E9C9032354021B005E6572 /* AirlinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				37969EA622F3900B0033C90F /* AppDelegate.swift */,
 				37969EAA22F3900B0033C90F /* Main.storyboard */,
+				37E9C9032354021B005E6572 /* AirlinesViewController.swift */,
 				3744186623063FEB0073E504 /* TimeZoneViewController.swift */,
 				371F801423037BF50053CB00 /* WeatherViewController.swift */,
 				37969EA822F3900B0033C90F /* ExchangeViewController.swift */,
@@ -156,6 +159,7 @@
 				37969EBB22F397FF0033C90F /* Currency.swift in Sources */,
 				3744186723063FEB0073E504 /* TimeZoneViewController.swift in Sources */,
 				371F801723039C030053CB00 /* WeatherRequest.swift in Sources */,
+				37E9C9042354021C005E6572 /* AirlinesViewController.swift in Sources */,
 				371F801523037BF50053CB00 /* WeatherViewController.swift in Sources */,
 				37969EA922F3900B0033C90F /* ExchangeViewController.swift in Sources */,
 				37969EA722F3900B0033C90F /* AppDelegate.swift in Sources */,
