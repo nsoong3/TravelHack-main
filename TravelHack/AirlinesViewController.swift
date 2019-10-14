@@ -10,10 +10,16 @@ import UIKit
 import Foundation
 
 struct AirlineResponse: Decodable {
-  var formatted: String
+  var tripset: [TripDetail]
+}
+
+struct TripDetail: Decodable {
+    var cheapestProviderName: String
+    var displayLowTotal: String
 }
 
 class AirlinesViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var originTextField: UITextField!
     @IBOutlet weak var destinationTextField: UITextField!
     @IBOutlet weak var departureYearTextField: UITextField!
@@ -23,11 +29,16 @@ class AirlinesViewController: UIViewController {
     @IBOutlet weak var bagsTextField: UITextField!
     @IBOutlet weak var currencyTextField: UITextField!
     @IBOutlet weak var cabinTextField: UITextField!
+    
+    var setOfTrips = [TripDetail]()
+    
 
       override func viewDidLoad() {
-          super.viewDidLoad()
+        super.viewDidLoad()
 
-          // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
       }
     
     @IBAction func search(_ sender: UIButton) {
@@ -45,6 +56,7 @@ class AirlinesViewController: UIViewController {
         let currency = currencyTextField.text!
         let cabin = cabinTextField.text!
         
+        
         let stringURL = "https://apidojo-kayak-v1.p.rapidapi.com/flights/create-session?" +
             "origin1=" + origin +
             "&destination1=" + destination +
@@ -61,22 +73,55 @@ class AirlinesViewController: UIViewController {
 
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-          if (error != nil) {
-            print(error as Any)
-          } else {
-            if let data = data {
-              print(data)
-              do {
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
-              } catch {
-                print(error)
-              }
+            if (error != nil) {
+                print(error as Any)
+            } else {
+                if let data = data {
+                    print(data)
+                    do {
+                        let decoder = JSONDecoder()
+                        let airlineResponse = try decoder.decode(AirlineResponse.self, from: data)
+                        let airlineDetails = airlineResponse.tripset
+                        self.setOfTrips = airlineDetails
+                        print(self.setOfTrips[0].cheapestProviderName)
+                        print(self.setOfTrips[0].displayLowTotal)
+                    } catch {
+                        print(error)
+                    }
+                }
             }
-          }
         })
 
         dataTask.resume()
+ 
     }
 
+}
+
+extension AirlinesViewController: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        print(#function)
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(#function)
+
+        // #warning Incomplete implementation, return the number of rows
+        return setOfTrips.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(#function)
+
+        // #warning Incomplete implementation, return the number of rows
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        let trip = setOfTrips[indexPath.row]
+        cell.textLabel?.text = trip.cheapestProviderName
+        cell.detailTextLabel?.text = trip.displayLowTotal
+        
+        return cell
+    }
 }
