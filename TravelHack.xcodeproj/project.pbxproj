@@ -19,6 +19,8 @@
 		37969EB922F396F20033C90F /* CurrencyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37969EB822F396F20033C90F /* CurrencyRequest.swift */; };
 		37969EBB22F397FF0033C90F /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37969EBA22F397FF0033C90F /* Currency.swift */; };
 		37E9C9042354021C005E6572 /* AirlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E9C9032354021B005E6572 /* AirlinesViewController.swift */; };
+		37E9C90C23555143005E6572 /* HotelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E9C90B23555143005E6572 /* HotelViewController.swift */; };
+		37E9C90E235560D2005E6572 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E9C90D235560D2005E6572 /* CarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		37969EB822F396F20033C90F /* CurrencyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRequest.swift; sourceTree = "<group>"; };
 		37969EBA22F397FF0033C90F /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		37E9C9032354021B005E6572 /* AirlinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinesViewController.swift; sourceTree = "<group>"; };
+		37E9C90B23555143005E6572 /* HotelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelViewController.swift; sourceTree = "<group>"; };
+		37E9C90D235560D2005E6572 /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 			children = (
 				37969EA622F3900B0033C90F /* AppDelegate.swift */,
 				37969EAA22F3900B0033C90F /* Main.storyboard */,
+				37E9C90D235560D2005E6572 /* CarViewController.swift */,
+				37E9C90B23555143005E6572 /* HotelViewController.swift */,
 				37E9C9032354021B005E6572 /* AirlinesViewController.swift */,
 				3744186623063FEB0073E504 /* TimeZoneViewController.swift */,
 				371F801423037BF50053CB00 /* WeatherViewController.swift */,
@@ -160,11 +166,13 @@
 				3744186723063FEB0073E504 /* TimeZoneViewController.swift in Sources */,
 				371F801723039C030053CB00 /* WeatherRequest.swift in Sources */,
 				37E9C9042354021C005E6572 /* AirlinesViewController.swift in Sources */,
+				37E9C90E235560D2005E6572 /* CarViewController.swift in Sources */,
 				371F801523037BF50053CB00 /* WeatherViewController.swift in Sources */,
 				37969EA922F3900B0033C90F /* ExchangeViewController.swift in Sources */,
 				37969EA722F3900B0033C90F /* AppDelegate.swift in Sources */,
 				37969EB922F396F20033C90F /* CurrencyRequest.swift in Sources */,
 				371F80192303A6F20053CB00 /* Weather.swift in Sources */,
+				37E9C90C23555143005E6572 /* HotelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -107,20 +107,20 @@ class AirlinesViewController: UIViewController {
 
 extension AirlinesViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        print(#function)
+//        print(#function)
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(#function)
+//        print(#function)
 
         // #warning Incomplete implementation, return the number of rows
         return setOfTrips.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(#function)
+//        print(#function)
 
         // #warning Incomplete implementation, return the number of rows
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
