@@ -98,7 +98,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieP-pc-9W8">
-                                <rect key="frame" x="86" y="203" width="203" height="36"/>
+                                <rect key="frame" x="86" y="165" width="203" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -117,7 +117,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e7d-1N-8Px">
-                                <rect key="frame" x="101" y="83" width="258" height="34"/>
+                                <rect key="frame" x="131" y="83" width="228" height="34"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -125,20 +125,20 @@
                                     <action selector="dismissKeyboard" destination="ufW-4l-L5F" eventType="editingDidEnd" id="oQ4-Dt-ZMr"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-WL-EgD">
-                                <rect key="frame" x="30" y="49" width="63" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-WL-EgD">
+                                <rect key="frame" x="30" y="49" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAY-CP-H3d">
-                                <rect key="frame" x="16" y="84" width="77" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAY-CP-H3d">
+                                <rect key="frame" x="16" y="84" width="107" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MHP-O2-OzQ">
-                                <rect key="frame" x="101" y="44" width="258" height="34"/>
+                                <rect key="frame" x="118" y="44" width="241" height="34"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -147,19 +147,13 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPM-qD-GDi">
-                                <rect key="frame" x="86" y="247" width="203" height="72"/>
+                                <rect key="frame" x="86" y="209" width="203" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoJ-FA-h7m">
-                                <rect key="frame" x="99" y="165" width="177" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oh0-fY-dEf">
-                                <rect key="frame" x="85" y="310" width="205" height="36"/>
+                                <rect key="frame" x="85" y="272" width="205" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -169,7 +163,7 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="LPM-qD-GDi" firstAttribute="leading" relation="lessThanOrEqual" secondItem="jvL-cW-tJc" secondAttribute="leading" constant="86" id="1pG-xi-VE7"/>
-                            <constraint firstItem="ieP-pc-9W8" firstAttribute="top" secondItem="NoJ-FA-h7m" secondAttribute="bottom" constant="2" id="7QK-PH-35M"/>
+                            <constraint firstItem="ieP-pc-9W8" firstAttribute="firstBaseline" secondItem="YVk-Ou-Ce8" secondAttribute="baseline" constant="40" symbolType="layoutAnchor" id="4ba-z5-eeB"/>
                             <constraint firstItem="gAY-CP-H3d" firstAttribute="leading" secondItem="jvL-cW-tJc" secondAttribute="leading" constant="16" id="8XK-5t-3Uk"/>
                             <constraint firstItem="Oh0-fY-dEf" firstAttribute="centerX" secondItem="LPM-qD-GDi" secondAttribute="centerX" id="AO0-AD-zCU"/>
                             <constraint firstItem="jvL-cW-tJc" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="z2L-D6-AK4" secondAttribute="trailing" constant="275" id="Gm7-sX-e4V"/>
@@ -182,10 +176,7 @@
                             <constraint firstItem="MHP-O2-OzQ" firstAttribute="leading" secondItem="8Md-WL-EgD" secondAttribute="trailing" constant="8" id="X0Q-bZ-KC0"/>
                             <constraint firstItem="z2L-D6-AK4" firstAttribute="top" secondItem="jvL-cW-tJc" secondAttribute="top" id="XDk-HK-TX7"/>
                             <constraint firstItem="gAY-CP-H3d" firstAttribute="top" secondItem="8Md-WL-EgD" secondAttribute="bottom" constant="14" id="aSQ-Jg-yl9"/>
-                            <constraint firstItem="NoJ-FA-h7m" firstAttribute="leading" relation="lessThanOrEqual" secondItem="jvL-cW-tJc" secondAttribute="leading" constant="99" id="fPr-F9-yvV"/>
                             <constraint firstItem="YVk-Ou-Ce8" firstAttribute="centerX" secondItem="jvL-cW-tJc" secondAttribute="centerX" id="foa-er-uBq"/>
-                            <constraint firstItem="jvL-cW-tJc" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="NoJ-FA-h7m" secondAttribute="trailing" constant="99" id="gpC-cf-qnq"/>
-                            <constraint firstItem="NoJ-FA-h7m" firstAttribute="top" secondItem="YVk-Ou-Ce8" secondAttribute="bottom" constant="2" id="hXE-6D-Z0w"/>
                             <constraint firstItem="z2L-D6-AK4" firstAttribute="leading" secondItem="jvL-cW-tJc" secondAttribute="leading" constant="20" id="izk-FR-nza"/>
                             <constraint firstItem="ieP-pc-9W8" firstAttribute="centerX" secondItem="jvL-cW-tJc" secondAttribute="centerX" id="j9o-Xv-JwE"/>
                             <constraint firstItem="8Md-WL-EgD" firstAttribute="top" secondItem="z2L-D6-AK4" secondAttribute="bottom" constant="13" id="jA2-Rx-oOb"/>
@@ -206,8 +197,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Weather" id="I4X-VX-Hw2"/>
                     <connections>
-                        <outlet property="latitudeTextField" destination="MHP-O2-OzQ" id="uZR-oI-356"/>
-                        <outlet property="longitudeTextField" destination="e7d-1N-8Px" id="xbc-gk-esD"/>
+                        <outlet property="cityNameTextField" destination="MHP-O2-OzQ" id="RNQ-TA-TEK"/>
+                        <outlet property="countryCodeTextField" destination="e7d-1N-8Px" id="Cgn-Zq-UHf"/>
                         <outlet property="temperature" destination="LPM-qD-GDi" id="04u-5u-pRy"/>
                         <outlet property="weatherDescription" destination="ieP-pc-9W8" id="vXp-s9-p57"/>
                         <outlet property="weatherIcon" destination="Oh0-fY-dEf" id="jRo-jg-1xO"/>

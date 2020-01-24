@@ -13,17 +13,15 @@ enum APIError: Error {
   case cannotProcessData
 }
 
-//new apiKey = pb1olU1T62KpD0vwkhIaD0dCOTPLdDfeHf8ZJ5LWSxY
-
-
 struct WeatherRequest {
-  let baseURL = "https://api.darksky.net/forecast/"
-  let apiKey = "baf044b60e49cd7c0fc769942aa21afa"
+//https://api.openweathermap.org/data/2.5/forecast?q=London,UK&appid=528c07412d10f3145ced88bdecfdde14
+  let baseURL = "https://api.openweathermap.org/data/2.5/weather?q="
+  let apiKey = "&appid=528c07412d10f3145ced88bdecfdde14" //
   
   let resource: URL
   
-  init(latitude: String, longitude: String) {
-    let resourceString = baseURL + apiKey + "/\(latitude),\(longitude)"
+  init(cityName: String, countryCode: String) {
+    let resourceString = baseURL + "\(cityName),\(countryCode)" + apiKey
     
     print("\(resourceString)")
     
@@ -33,7 +31,7 @@ struct WeatherRequest {
     self.resource = resourceURL
   }
   
-  func getWeather (completion: @escaping(Result<WeatherDetail, APIError>) -> Void) {
+  func getWeather (completion: @escaping(Result<WeatherResponse, APIError>) -> Void) {
     //    print(#function)
     
     let dataTask = URLSession.shared.dataTask(with: resource) { data,_,_  in
@@ -45,7 +43,7 @@ struct WeatherRequest {
       do {
         let decoder = JSONDecoder()
         let weatherResponse = try decoder.decode(WeatherResponse.self, from: jsonData)
-        let weatherDetails = weatherResponse.currently
+        let weatherDetails = weatherResponse
         completion(.success(weatherDetails))
       } catch {
         completion(.failure(.cannotProcessData))

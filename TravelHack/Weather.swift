@@ -9,11 +9,15 @@
 import Foundation
 
 struct WeatherResponse: Decodable {
-  var currently: WeatherDetail
+    var weather: [WeatherDetail]
+    var main: MainDetail
+}
+
+struct MainDetail: Decodable {
+    var temp: Double
 }
 
 struct WeatherDetail: Decodable {
-  var summary: String
-  var icon: String
-  var temperature: Double
+    var main: String
+    var description: String
 }

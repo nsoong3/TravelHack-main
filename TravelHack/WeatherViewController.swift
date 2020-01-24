@@ -12,8 +12,8 @@ class WeatherViewController: UIViewController {
   @IBOutlet weak var weatherDescription: UILabel!
   @IBOutlet weak var temperature: UILabel!
   @IBOutlet weak var weatherIcon: UILabel!
-  @IBOutlet weak var latitudeTextField: UITextField!
-  @IBOutlet weak var longitudeTextField: UITextField!
+  @IBOutlet weak var cityNameTextField: UITextField!
+  @IBOutlet weak var countryCodeTextField: UITextField!
   
   let emojiIcons = [
     "clear-day": "☀️",
@@ -29,23 +29,33 @@ class WeatherViewController: UIViewController {
   ]
   
   @IBAction func weatherForecast() {
-    let weatherRequest = WeatherRequest(latitude: latitudeTextField.text!, longitude: longitudeTextField.text!)
+    let weatherRequest = WeatherRequest(cityName: cityNameTextField.text!, countryCode: countryCodeTextField.text!)
     weatherRequest.getWeather { result in
       switch result {
       case .failure(let error):
         print(error)
       case .success(let weather):
-        print("Summary: \(weather.summary)")
-        print("Icon: \(weather.icon)")
-        print("Temperature: \(weather.temperature)")
+        print("Main: \(weather.weather[0].main)")
+        print("Description: \(weather.weather[0].description)")
+        print("Temperature: \(weather.main.temp)")
         DispatchQueue.main.async {
-          self.weatherDescription.text = weather.summary
-          self.weatherIcon.text = self.emojiIcons[weather.icon] ?? "❓"
-          self.temperature.text = "\(weather.temperature) °F"
+            self.weatherDescription.text = self.emojiIcons[weather.weather[0].main.lowercased()] ?? weather.weather[0].main
+          self.weatherIcon.text = self.emojiIcons[weather.weather[0].description] ?? "\(weather.weather[0].description)"
+            let localTemp = weather.main.temp
+            print(self.convertToF(temp: localTemp))
+            self.temperature.text = "\(self.convertToF(temp: localTemp)) °F"
         }
       }
     }
   }
+    
+    func convertToF(temp: Double) -> String {
+        let convertTemp = (temp - 273.15) * 9.0 / 5 + 32
+        let format = NumberFormatter()
+        format.maximumSignificantDigits = 4
+        let tempFormatted = format.string(for: convertTemp)
+        return tempFormatted!
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,8 +64,8 @@ class WeatherViewController: UIViewController {
     }
   
   @IBAction func dismissKeyboard() {
-    latitudeTextField.resignFirstResponder()
-    longitudeTextField.resignFirstResponder()
+    cityNameTextField.resignFirstResponder()
+    countryCodeTextField.resignFirstResponder()
   }
 
 }
