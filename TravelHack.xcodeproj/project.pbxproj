@@ -11,6 +11,7 @@
 		371F801723039C030053CB00 /* WeatherRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371F801623039C030053CB00 /* WeatherRequest.swift */; };
 		371F80192303A6F20053CB00 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371F80182303A6F20053CB00 /* Weather.swift */; };
 		3744186723063FEB0073E504 /* TimeZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3744186623063FEB0073E504 /* TimeZoneViewController.swift */; };
+		37828D34237239480015680B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37828D33237239480015680B /* Default-568h@2x.png */; };
 		37969EA722F3900B0033C90F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37969EA622F3900B0033C90F /* AppDelegate.swift */; };
 		37969EA922F3900B0033C90F /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37969EA822F3900B0033C90F /* ExchangeViewController.swift */; };
 		37969EAC22F3900B0033C90F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37969EAA22F3900B0033C90F /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		371F801623039C030053CB00 /* WeatherRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRequest.swift; sourceTree = "<group>"; };
 		371F80182303A6F20053CB00 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		3744186623063FEB0073E504 /* TimeZoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneViewController.swift; sourceTree = "<group>"; };
+		37828D33237239480015680B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		37969EA322F3900B0033C90F /* TravelHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37969EA622F3900B0033C90F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37969EA822F3900B0033C90F /* ExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		37969E9A22F3900A0033C90F = {
 			isa = PBXGroup;
 			children = (
+				37828D33237239480015680B /* Default-568h@2x.png */,
 				37969EA522F3900B0033C90F /* TravelHack */,
 				37969EA422F3900B0033C90F /* Products */,
 			);
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37969EB122F3900D0033C90F /* LaunchScreen.storyboard in Resources */,
+				37828D34237239480015680B /* Default-568h@2x.png in Resources */,
 				37969EAE22F3900D0033C90F /* Assets.xcassets in Resources */,
 				37969EAC22F3900B0033C90F /* Main.storyboard in Resources */,
 			);
@@ -321,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF5UFFW63P;
 				INFOPLIST_FILE = TravelHack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +344,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QF5UFFW63P;
 				INFOPLIST_FILE = TravelHack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
